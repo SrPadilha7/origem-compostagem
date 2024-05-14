@@ -1,0 +1,227 @@
+html {
+    color: #000000;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif; /* Lembrando para utilizar uma fonte carregar ela antes no html*/
+    margin: 0 auto; /*cima baixo direita esquerda ou cima e lado*/
+    max-width: 1120px;
+    background: linear-gradient(150deg, #472618, #fee797, #90db3b);
+    background-size: 120% 120%;
+}
+
+.cabecalho {
+    display: flex; /*mudou o posicionamento dos elementos do cabecalho no caso colocou um do lado do outro*/
+    justify-content: space-between; /* espaço entre os elementos*/
+    align-items: center; /*alinhamento*/
+    padding: 30px 15px; /*espaço entre elementos, cima baixo direita esquerda*/
+}
+
+.cabecalho .logo {
+    width: 65px; /*largura*/
+    height: 65px;/*altura*/
+    border-radius: 50%;/*faz as curvas nas bordas no caso aqui deixou redondo*/
+    color: #000000;
+    border: 2px solid #000000;/* tamanho, tipo de boda, cor da borda*/
+    text-decoration: underline;
+    text-align: center; /*centraliza o texto dento*/
+    line-height: 55px; /*ajusta o teto para cima e para baixo*/
+    font-family: "Raleway", sans-serif;
+    transition: 0.2s;/*faz a transição de cor descrito no codigo a baixo a:hover*/
+} /*um elemento dentro da classe cabecalho, especificar a classe anterior ajuda pois se tiver duas classes logo ele modifica as duas*/
+
+.cabecalho a:hover .logo{
+    color: #90db3b;
+    border: 2px solid #90db3b;
+}/* quando o usuario passar o por cima (hover)*/
+
+.cabecalho .menu li a{
+    color: #000000;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover{
+    background-color: #90db3b;
+    color: #000000;
+    border-radius: 50px;
+}
+
+.home {
+    display: flex;
+    min-height: calc(100vh - 125px);/*ele deixa a home exclusiva mente na tela e o 100vh significa 100% do visor porem como tem o menu emcima então utilize uma função CALC()*/
+    align-items: center;
+    gap: 50px;/*deixa um espaço fixo entre os elementos*/
+    justify-content: space-between;
+}
+
+.home .informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px;/*deixa a letra do texto um pouco mais separadas*/
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.home .informacoes h1 {
+    font-family: "Rakeway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home .informacoes p{
+    font-family: "Rakeway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .redes-sociais{
+    display: flex;
+    gap: 20px;
+}
+
+.home .redes-sociais a i{
+    border: 1px solid #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais a i:hover{
+    color: #90db3b;
+    border: 1px solid #90db3b;
+    transform: scale(1.1);
+}
+
+.home .container-foto .foto{
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container-foto img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home .foto.sombra-interna{
+    background: linear-gradient(to right, #8a35C8, #18C063, #00EEA2);
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.origem{
+    padding: 70px 0;/*70 em cima e embaixo e 0 dos lados*/
+}
+
+.origem .origem{
+    text-align: justify;
+    padding: 30px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.fotos .titulo{
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.fotos .container-fotos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.fotos .foto{
+    max-width: 260px;
+    max-height: 260px;
+    position: relative;
+    display: none;
+}
+
+.fotos .foto.ativos{
+    display: block;
+}
+
+.fotos .foto img{
+    height: 100%;
+}
+
+.fotos .foto h3{
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.fotos .foto .informacoes-foto{
+    background-color: #040203;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.fotos .container-fotos .foto:hover .informacoes-foto{
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.fotos .btn-mostrar-fotos{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;/*muda o mouse para a maozinha*/
+    transition: 0.3s;
+}
+
+.fotos .btn-mostrar-fotos:hover{
+    background-color: #90db3b;
+}
+
+.fotos .btn-mostrar-fotos.remover{
+    display: none;
+}
+
+@keyframes gradient-animation{
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

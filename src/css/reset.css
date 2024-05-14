@@ -1,0 +1,21 @@
+/* por padrão o navegador ele aplica um estilo no nosso html para ficar apresentavel e utilizamos o reset para que nao atrapalhe no nosso codigo de estilo.*/
+* {
+    margin: 0; /* espaçamento externo  */
+    padding: 0; /*  espaçamento interno, separa o contteudo da borda do elemento */
+    border: none; /* nenhuma borda*/
+    outline: none; /* pesquisar para que serve */
+    box-sizing: border-box;/* nos ajuda a trabalhar com largura */
+}/*seletor univelsal*/
+
+a {
+    text-decoration: none;/*decoração do texto*/
+    color: #fff;
+}/*seletor da teg dos links*/
+
+ul {
+    list-style: none; /* estilo da lista, por padrao ela vem com uma bolinha preta*/
+}
+
+img {
+    max-width: 100%; /* todas as imagens terao uma largura maxima de 100%*/
+}
