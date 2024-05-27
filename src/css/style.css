@@ -13,9 +13,9 @@ body {
 
 .cabecalho {
     display: flex; /*mudou o posicionamento dos elementos do cabecalho no caso colocou um do lado do outro*/
-    justify-content: space-between; /* espaço entre os elementos*/
-    align-items: center; /*alinhamento*/
-    padding: 30px 15px; /*espaço entre elementos, cima baixo direita esquerda*/
+    justify-content:space-around; /* espaço entre os elementos*/
+    align-items:center; /*alinhamento*/
+    padding: 30px; /*espaço entre elementos, cima baixo direita esquerda*/
 }
 
 .cabecalho .logo {
@@ -29,13 +29,14 @@ body {
     line-height: 55px; /*ajusta o teto para cima e para baixo*/
     font-family: "Raleway", sans-serif;
     transition: 0.2s;/*faz a transição de cor descrito no codigo a baixo a:hover*/
-} /*um elemento dentro da classe cabecalho, especificar a classe anterior ajuda pois se tiver duas classes logo ele modifica as duas*/
+    } /*um elemento dentro da classe cabecalho, especificar a classe anterior ajuda pois se tiver duas classes logo ele modifica as duas*/
 
 .cabecalho a:hover .logo{
     color: #90db3b;
     border: 2px solid #90db3b;
 }/* quando o usuario passar o por cima (hover)*/
 
+/*
 .cabecalho .menu li a{
     color: #000000;
     font-size: 20px;
@@ -48,6 +49,71 @@ body {
     background-color: #90db3b;
     color: #000000;
     border-radius: 50px;
+}
+*/
+
+nav {
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.cabecalho .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho .menu li {
+    float: left;
+}
+
+.cabecalho .menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.cabecalho .menu li a:hover {
+    background-color: #111;
+}
+
+.cabecalho .menu .login-form {
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .menu .login-form input {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.cabecalho .menu .login-form button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cabecalho .menu .login-form button:hover {
+    background-color: #111;
+}
+
+.cabecalho .menu .login-form a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.cabecalho .menu .login-form a:hover {
+    background-color: #111;
 }
 
 .home {
