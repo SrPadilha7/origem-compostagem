@@ -4,39 +4,62 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    margin: 0 auto;
+    font-family: "Poppins", sans-serif; /* Lembrando para utilizar uma fonte carregar ela antes no html*/
+    margin: 0 auto; /*cima baixo direita esquerda ou cima e lado*/
     max-width: 1120px;
-    background: linear-gradient(150deg, #4D2F28, #d7662c, #ea9546, #f4e098);
-    background-size: 110% 110%;
-}
-
-.cabecalho {
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    padding: 30px;
+    background: linear-gradient(150deg, #472618, #fee797, #90db3b);
+    background-size: 120% 120%;
 }
 
 nav {
     background-color: #333;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
+}
+
+.cabecalho {
+    display: flex; /*mudou o posicionamento dos elementos do cabecalho no caso colocou um do lado do outro*/
+    justify-content:center; /* espaço entre os elementos*/
+    align-items:center; /*alinhamento*/
+    padding: 30px; /*espaço entre elementos, cima baixo direita esquerda*/
 }
 
 .cabecalho .logo {
-    width: 100px;
-    height: 35px;
+    width: 100px; /*largura*/
+    height: 35px;/*altura*/
+    /*border-radius: 20px;/*faz as curvas nas bordas no caso aqui deixou redondo*/
+    /*max-width: 75px;*/
+    /*border: 2px solid #000000;/* tamanho, tipo de boda, cor da borda*/
+    /*text-decoration: underline;
+    /*text-align: center; /*centraliza o texto dento*/
+    /*line-height: 55px; /*ajusta o teto para cima e para baixo*/
+    /*font-family: "Raleway", sans-serif;*/
+    /*transition: 0.2s;/*faz a transição de cor descrito no codigo a baixo a:hover*/
+    } /*um elemento dentro da classe cabecalho, especificar a classe anterior ajuda pois se tiver duas classes logo ele modifica as duas*/
+
+/*
+.cabecalho .menu li a{
+    color: #000000;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.2s;
 }
 
+.cabecalho .menu li a:hover{
+    background-color: #90db3b;
+    color: #000000;
+    border-radius: 50px;
+}
+*/
+
 .cabecalho .menu {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .cabecalho .menu li {
@@ -44,10 +67,10 @@ nav {
 }
 
 .cabecalho .menu li a {
-    display: inline-flex;
+    display: block;
     color: white;
     text-align: center;
-    padding: 10px 15px;
+    padding: 14px 15px;
     text-decoration: none;
 }
 
@@ -59,7 +82,6 @@ nav {
 .cabecalho .menu .login-form {
     display: flex;
     align-items: center;
-    
 }
 
 .cabecalho .menu .login-form input {
@@ -92,9 +114,9 @@ nav {
 
 .home {
     display: flex;
-    min-height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);/*ele deixa a home exclusiva mente na tela e o 100vh significa 100% do visor porem como tem o menu emcima então utilize uma função CALC()*/
     align-items: center;
-    gap: 50px;
+    gap: 50px;/*deixa um espaço fixo entre os elementos*/
     justify-content: space-between;
 }
 
@@ -102,7 +124,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    letter-spacing: 2px;
+    letter-spacing: 2px;/*deixa a letra do texto um pouco mais separadas*/
     padding: 0 15px;
     max-width: 50%;
 }
@@ -139,7 +161,7 @@ nav {
     color: #90db3b;
     border: 1px solid #90db3b;
     transform: scale(1.1);
-}
+}/* quando o usuario passar o por cima (hover)*/
 
 .home .container-foto .foto{
     max-width: 450px;
@@ -147,18 +169,18 @@ nav {
 }
 
 .home .container-foto img{
-    width: 98%;
+    width: 100%;
     border-radius: 50%;
 }
 
 .home .foto.sombra-interna{
-    background: linear-gradient(to right, #3a6547, #9ece86);
-    background-size: 190% 120%;
+    background: linear-gradient(to right, #8a35C8, #18C063, #00EEA2);
+    background-size: 180% 180%;
     animation: gradient-animation 5s ease infinite;
 }
 
 .origem{
-    padding: 70px 0;
+    padding: 70px 0;/*70 em cima e embaixo e 0 dos lados*/
 }
 
 .origem .origem{
@@ -240,7 +262,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer;/*muda o mouse para a maozinha*/
     transition: 0.3s;
 }
 
