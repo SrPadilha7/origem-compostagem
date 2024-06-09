@@ -23,15 +23,18 @@
 
 <body>
     <header class="cabecalho">
+    <div class="logo">
+        <img src="./src/imagens/NewLogo.png" alt="Nova Logo">
+    </div>
         <nav class="menu">
             <ul>
-                <li class="logo">
+                <!--<li class="logo">
                     <a href="#">
-                        <!-- <div class="logo"> -->
+                         <div class="logo">
                             <img src="./src/imagens/NewLogo.png" alt="Nova Logo">
-                        <!-- </div> -->
+                         </div>
                     </a>
-                </li>
+                </li>-->
                 <li>
                     <a href="#origem">Origem</a>
                 </li>
@@ -43,7 +46,7 @@
                 <li>
                     <a href="#contact">Contato</a>
                 </li>
-                <li class="login-form">
+                <li class="login-form" style="display: none;"> <!--remover o style para voltar a aparecer no menu-->
                     <button id="login-button">Entrar</button>
                     <div id="login-fields" style="display: none;">
                         <input type="text" placeholder="Usuário">
